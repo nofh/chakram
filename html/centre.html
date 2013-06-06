@@ -1,0 +1,148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Chakram</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="../style.css" rel="stylesheet" type="text/css" media="screen" />
+<!-- pour la page active -->
+<script src="../ressources/js/utile.js"></script>
+<!-- pour google maps -->
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+<script src="../ressources/js/adressesGoogleMap.js"></script>
+</head>
+<!-- pour le carousel -->
+<script type="text/javascript"
+        src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js">
+</script>
+<script type="text/javascript"
+        src="../ressources/js/jquery.jcarousel-autoscroll.min.js">
+</script>
+<script type="text/javascript">
+
+function mycarousel_initCallback(carousel)
+{
+    // Disable autoscrolling if the user clicks the prev or next button.
+    carousel.buttonNext.bind('click', function() {
+        carousel.startAuto(0);
+    });
+
+    carousel.buttonPrev.bind('click', function() {
+        carousel.startAuto(0);
+    });
+
+    // Pause autoscrolling if the user moves with the cursor over the clip.
+    carousel.clip.hover(function() {
+        carousel.stopAuto();
+    }, function() {
+        carousel.startAuto();
+    });
+};
+
+jQuery(document).ready(function() {
+    jQuery('#mycarousel').jcarousel({
+        auto: 2,
+        wrap: 'last',
+        initCallback: mycarousel_initCallback
+    });
+});
+
+</script>
+<body onload="">
+<div id="logo">
+	<h1><a href="#">Chakram</a></h1>
+	<h2> Centre de psychothérapies de Nivelles Mons Namur</h2>
+	<a href=""><img src="../images/logo.png" alt="logo"/></a>
+</div>
+
+<!-- start header -->
+<div id="header">
+	<div id="menu">
+		<ul>
+			<li id="menu1"><a href="../index.html">Accueil</a></li>
+			<li id="menu2"><a href="therapies.html">Les Thérapies</a></li>
+			<li id="menu3"><a href="centre.html">Le Centre</a></li>
+			<li id="menu4"><a href="sceance.html">La Scéance</a></li>
+			<li id="menu5"><a href="questions.html">Vos Questions</a></li>
+			<li id="menu6"><a href="contact.html">Contact</a></li>
+		</ul>
+	</div>
+</div>
+<!-- end header -->
+<hr />
+<!-- start page -->
+<div id="page">
+
+	<!-- start content -->
+	<div id="content">
+<div class="post">
+			<h1 class="title"> <a href="#">Philosophie du centre</a></h1>
+			<div class="entry">
+ 					<p> TODO: TEXT DESC Ideoque fertur neminem aliquando ob haec vel similia poenae addictum oblato de more elogio revocari iussisse, quod inexorabiles quoque principes factitarunt. et exitiale hoc vitium, quod in aliis non numquam intepescit, in illo aetatis progressu effervescebat, obstinatum eius propositum accendente adulatorum cohorte.</p>
+						
+	
+			</div> <!-- /entry -->
+		</div> <!-- /post -->
+
+
+
+<div id="adresse1">
+<h2> Mons </h2>
+<div id="map-canvas-mons" style="width:350px;height:300px;"></div>
+<p> jkeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee</p>
+</div>
+
+<div id="adresse2">
+<h2> Mons </h2>
+<div id="map-canvas-nivelle" style="width:350px;height:300px;"></div>
+<p> jkeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeek</p>
+</div>
+
+<div id="caroussel">
+</div>
+<!-- end adresse -->
+
+
+<div id="wrap">
+  <h1>jCarousel</h1>
+  <h2>Riding carousels with jQuery</h2>
+
+  <h3>Carousel with autoscrolling</h3>
+  <p>
+    Autoscrolling is enabled and the interval is set to <code>2</code> seconds.
+    Autoscrolling pauses when the user moves the cursor over the images and stops
+    when the user clicks the next or prev button. <code>wrap</code> is set to
+    <code>&quot;last&quot;</code>.
+  </p>
+
+  <ul id="mycarousel" class="jcarousel-skin-tango">
+    <li><img src="http://static.flickr.com/66/199481236_dc98b5abb3_s.jpg" width="75" height="75" alt="" /></li>
+    <li><img src="http://static.flickr.com/75/199481072_b4a0d09597_s.jpg" width="75" height="75" alt="" /></li>
+    <li><img src="http://static.flickr.com/57/199481087_33ae73a8de_s.jpg" width="75" height="75" alt="" /></li>
+    <li><img src="http://static.flickr.com/77/199481108_4359e6b971_s.jpg" width="75" height="75" alt="" /></li>
+    <li><img src="http://static.flickr.com/58/199481143_3c148d9dd3_s.jpg" width="75" height="75" alt="" /></li>
+    <li><img src="http://static.flickr.com/72/199481203_ad4cdcf109_s.jpg" width="75" height="75" alt="" /></li>
+    <li><img src="http://static.flickr.com/58/199481218_264ce20da0_s.jpg" width="75" height="75" alt="" /></li>
+    <li><img src="http://static.flickr.com/69/199481255_fdfe885f87_s.jpg" width="75" height="75" alt="" /></li>
+    <li><img src="http://static.flickr.com/60/199480111_87d4cb3e38_s.jpg" width="75" height="75" alt="" /></li>
+    <li><img src="http://static.flickr.com/70/229228324_08223b70fa_s.jpg" width="75" height="75" alt="" /></li>
+  </ul>
+
+</div>
+
+	</div> <!-- page -->
+	<!-- end content -->
+</div>
+<!-- end page -->
+<hr />
+<!-- start footer -->
+
+<!-- end footer -->
+</body>
+</html>
+
